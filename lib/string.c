@@ -26,7 +26,6 @@
 #include <linux/export.h>
 #include <linux/bug.h>
 #include <linux/errno.h>
-#include <linux/module.h>
 #include <linux/memcopy.h>
 
 #ifndef __HAVE_ARCH_STRNICMP
@@ -624,7 +623,7 @@ void *memmove(void *dest, const void *src, size_t count)
 	unsigned long dstp = (unsigned long)dest; 
 	unsigned long srcp = (unsigned long)src; 
 
-	if (dest - src >= count) {
+	if (dest - src >= count) { 
 		/* Copy from the beginning to the end */ 
 		mem_copy_fwd(dstp, srcp, count); 
 	} else {
