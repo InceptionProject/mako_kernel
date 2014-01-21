@@ -2197,8 +2197,10 @@ static void touch_power_on(struct lge_touch_data *ts)
 
 #ifdef CONFIG_DOUBLETAP_WAKE
 	if (ts->dt_wake.enabled)
+		wake_unlock(&ts->dt_wake.wlock);
 		disable_irq_wake(ts->client->irq);
-	else {
+		release_all_ts_event(ts);
+	} else {
 #endif
 		touch_power_cntl(ts, ts->pdata->role->resume_pwr);
 
