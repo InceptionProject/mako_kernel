@@ -40,6 +40,7 @@ zip -r -9 $zipfile *
 rm -f /tmp/*.zip
 cp *.zip /tmp
 
+cd ..
 cp any-kernel/Inception.kernel-nightly.zip ../Flash
 
 rm arch/arm/boot/zImage
