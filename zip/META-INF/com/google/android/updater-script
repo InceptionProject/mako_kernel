@@ -1,8 +1,0 @@
-ui_print("Hacking your dreams......");
-ui_print("23%...");
-ui_print("50%...");
-ui_print("77%...");
-ui_print("96%...An ERROR OCCURED WHILE THE HACK !!STOP!! !!STOP!!");
-package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
-ui_print("I am not able to hack your dreams But i Hacked your MAKO hahahaha :D");
-set_progress(1.000000);
