@@ -40,6 +40,13 @@ zip -r -9 $zipfile *
 rm -f /tmp/*.zip
 cp *.zip /tmp
 
+cp any-kernel/Inception.kernel-nightly.zip ../Flash
+
+rm arch/arm/boot/zImage
+rm kernel.log
+rm any-kernel/kernel/zImage
+rm any-kernel/Inception.kernel-nightly.zip
+
 echo ""
 echo ""
 echo "Kernel build done"
